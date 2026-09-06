@@ -8,7 +8,7 @@
 <body>
 
   <h1>Privacy Policy</h1>
-  <p><strong>Last updated:</strong> 2026-06-28</p>
+  <p><strong>Last updated:</strong> 2026-09-06</p>
 
   <h2>1. Overview</h2>
   <p>
@@ -16,7 +16,9 @@
     stay on your device unless you explicitly export or share them using your operating system’s features.
     To keep the app reliable and understand how core features are used, we use third-party crash reporting
     and analytics services. This policy describes both what stays on your device and what limited technical
-    and app interaction data may be sent for diagnostics and product improvement.
+    and app interaction data may be sent for diagnostics, product improvement, and measurement of our
+    advertising campaigns. The Apple Ads attribution described in section 4.1 applies starting with
+    Photo Paranoid version 1.1.8.
   </p>
 
   <h2>2. Your content</h2>
@@ -33,7 +35,7 @@
   <h2>3. Crash diagnostics (Firebase Crashlytics)</h2>
   <p>
     We use <strong>Google Firebase Crashlytics</strong> (provided by Google LLC) to receive
-    crash reports and limited technical diagnostics when the app crashes.
+    crash reports and limited technical diagnostics when the app crashes or encounters recoverable errors.
     This helps us understand bugs, improve stability, and fix issues.
   </p>
   <p>Crash reports may include, for example:</p>
@@ -62,7 +64,8 @@
   <h2>4. Analytics (Firebase Analytics)</h2>
   <p>
     We use <strong>Google Firebase Analytics</strong> (provided by Google LLC) to understand basic app usage
-    and improve the app experience. Analytics events may include interactions such as viewing the paywall,
+    and improve the app experience. Analytics events may include onboarding progress, import and export
+    outcomes and file counts, PIN setup and the method used to unlock the vault, viewing the paywall,
     selecting a subscription plan, starting or completing a purchase flow, restoring purchases,
     changing app settings, tapping review prompts, or enabling app privacy features.
   </p>
@@ -77,6 +80,35 @@
     other companies’ apps or websites. We do not intentionally collect Apple’s advertising identifier (IDFA);
     depending on device and operating system behavior, Firebase Analytics may use non-advertising app or
     vendor identifiers for measurement and diagnostics.
+  </p>
+
+  <h3>4.1 Apple Ads attribution and campaign measurement</h3>
+  <p>
+    Starting with version 1.1.8, we use Apple's AdServices framework to ask Apple whether an app
+    installation is attributed to one of our Apple Ads campaigns. The app obtains an attribution token
+    and sends it directly to Apple's attribution service. We do not persist this token or send it to Firebase.
+  </p>
+  <p>
+    Depending on the information Apple makes available, the response may include attribution status,
+    campaign, ad group, keyword and ad identifiers, attribution and conversion types, country or region,
+    and ad placement. Keyword identifiers identify advertising keywords; we do not receive the text of
+    your individual search query through this integration.
+  </p>
+  <p>
+    We save the available attribution fields locally and send them to Google Firebase Analytics with
+    app interaction events, including paywall views, selected subscription plans, purchase-flow outcomes,
+    and use of app features. We use this information to understand which campaigns bring users to the
+    app and how those campaigns relate to app usage and subscription activity.
+  </p>
+  <p>
+    Firebase can associate these events with an app-instance or installation identifier. This means
+    the event-level data is pseudonymous, rather than fully anonymous, even when we review it in
+    aggregate reports. You do not need to provide your name or create an account for this measurement.
+  </p>
+  <p>
+    These events do not include PIN values, biometric data, filenames, media metadata, or the contents
+    of your vault. We do not use this integration to show advertisements inside the app or to build
+    audiences for personalized advertising across other companies' apps and websites.
   </p>
 
   <h2>5. Personal information we do not ask for in the app</h2>
