@@ -11,7 +11,7 @@
     const lang = document.documentElement.lang || 'en';
     const theme = document.documentElement.dataset.theme || 'light';
     nav.setAttribute('aria-label', copy[lang] || copy.en);
-    link.href = `../?lang=${encodeURIComponent(lang)}&theme=${encodeURIComponent(theme)}`;
+    link.href = '../' + window.releaseContext.query(lang, theme, location.search);
     link.textContent = copy[lang] || copy.en;
   }
   new MutationObserver(update).observe(document.documentElement, {
