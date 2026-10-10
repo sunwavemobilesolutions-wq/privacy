@@ -8,6 +8,7 @@ const explicit = ['light','dark'].includes(params.get('theme')) ? params.get('th
 function render(){
  document.documentElement.lang = lang;
  document.documentElement.dataset.theme = explicit || (media.matches ? 'dark' : 'light');
+ document.querySelectorAll('img[data-source-dark]').forEach(img => {img.src = document.documentElement.dataset.theme === 'dark' ? img.dataset.sourceDark : img.dataset.sourceLight;});
  document.querySelectorAll('[data-locale]').forEach(el => el.hidden = el.dataset.locale !== lang);
  document.getElementById('language').value = lang;
  document.getElementById('language-label').textContent = {en:'Language',ru:'Язык',pl:'Język'}[lang];
