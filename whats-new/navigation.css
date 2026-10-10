@@ -13,3 +13,6 @@
 .in-app .release-nav .language{flex-shrink:0}
 .in-app .release-nav .language select{border:0;min-width:48px;padding:4px}
 .in-app h1{margin-top:12px}
+
+/* In-app pages inherit the app language; browser visitors can choose. */
+.in-app .language,.in-app .brand-bar{display:none}
