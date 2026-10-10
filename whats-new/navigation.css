@@ -1,4 +1,15 @@
 .release-nav{display:flex;text-align:left;align-items:center;min-height:48px;margin:0 0 20px}.release-nav a{color:var(--accent);font-size:14px;text-decoration:none;min-height:44px;display:flex;align-items:center}.release-nav a:before{content:'‹';font-size:23px;margin-right:8px}
 .history-title{font-size:24px;line-height:1.25;letter-spacing:-.5px;text-align:left;margin:8px 0 22px}.version-list{text-align:left;border-top:1px solid var(--line)}.version-row{display:block;position:relative;color:var(--text);text-decoration:none;padding:22px 30px 22px 0;border-bottom:1px solid var(--line);min-height:92px}.version-heading{display:flex;gap:10px;align-items:center;font-size:18px;font-weight:650;line-height:1.35}.version-heading small{font-size:11px;font-weight:500;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 6px}.version-summary{display:block;margin-top:7px;font-size:14px;line-height:1.5;color:var(--muted)}.row-arrow{position:absolute;right:2px;top:50%;transform:translateY(-50%);font-size:25px;color:var(--muted)}.version-row:hover .version-heading{color:var(--accent)}
 
-.release-update{margin:24px 0;padding:16px 20px;border:1px solid var(--line);border-radius:16px;text-align:left}.release-update[hidden]{display:none}.release-update p{margin:0 0 6px;color:var(--muted);font-size:14px;line-height:1.5}.release-update a{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.release-update{margin:14px auto 0;padding:0;max-width:350px;text-align:center}.release-update[hidden]{display:none}.release-update p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}.release-update a{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.in-app .brand-bar .brand{display:none}
+.in-app .brand-bar{justify-content:flex-end;padding:8px 0 0}
+.in-app .brand-bar:empty{display:none}
+.in-app .brand-bar:has(+ main .release-nav){display:none}
+.in-app .release-nav{gap:10px;margin:0;padding:8px 0;min-height:60px;justify-content:space-between}
+.in-app .release-nav>a{font-size:13px;min-width:0}
+.in-app .release-nav .release-line{margin-left:auto;flex-shrink:0}
+.in-app .release-nav #eyebrow{display:none}
+.in-app .release-nav .language{flex-shrink:0}
+.in-app .release-nav .language select{border:0;min-width:48px;padding:4px}
+.in-app h1{margin-top:12px}

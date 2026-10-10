@@ -7,6 +7,13 @@
   const link = document.createElement('a');
   nav.append(link);
   main.prepend(nav);
+  if (window.releaseContext.appVersion(location.search)) {
+    document.documentElement.classList.add('in-app');
+    const version = main.querySelector('.release-line');
+    const language = document.querySelector('.brand-bar .language');
+    if (version) nav.append(version);
+    if (language) nav.append(language);
+  }
   function update() {
     const lang = document.documentElement.lang || 'en';
     const theme = document.documentElement.dataset.theme || 'light';

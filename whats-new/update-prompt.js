@@ -4,9 +4,9 @@
   const main = document.querySelector('main');
   if (!context || !main) return;
   const copy = {
-    en: {available: version => `Available in version ${version}`, update: 'Update in App Store', open: 'Open in App Store'},
-    ru: {available: version => `Доступно в версии ${version}`, update: 'Обновить в App Store', open: 'Открыть в App Store'},
-    pl: {available: version => `Dostępne w wersji ${version}`, update: 'Uaktualnij w App Store', open: 'Otwórz w App Store'}
+    en: {available: version => `Update to ${version} to use these features`, update: 'Update in App Store', open: 'Open in App Store'},
+    ru: {available: version => `Эти возможности доступны с версии ${version}`, update: 'Обновить в App Store', open: 'Открыть в App Store'},
+    pl: {available: version => `Te funkcje są dostępne od wersji ${version}`, update: 'Uaktualnij w App Store', open: 'Otwórz w App Store'}
   };
   const panel = document.createElement('aside');
   panel.className = 'release-update';
