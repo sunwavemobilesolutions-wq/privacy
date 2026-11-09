@@ -8,12 +8,14 @@
 <body>
 
   <h1>Privacy Policy</h1>
-  <p><strong>Last updated:</strong> 2026-11-02</p>
+  <p><strong>Last updated:</strong> 2026-11-09</p>
 
   <h2>1. Overview</h2>
   <p>
-    Your privacy is important to us. The app is built so that <strong>your photos, videos, and files</strong>
-    stay on your device unless you explicitly export or share them using your operating system’s features.
+    Your privacy is important to us.
+    The app is built so that your photos, videos, and files remain on your iPhone during
+    normal use unless you choose to export or share them. Apple-managed iPhone backup or
+    device transfer may also include app data; we do not receive your vault content.
     To keep the app reliable and understand how core features are used, we use third-party crash reporting
     and analytics services. This policy describes both what stays on your device and what limited technical
     and app interaction data may be sent for diagnostics, product improvement, and measurement of our
@@ -29,30 +31,38 @@
     <li>sell your library content to third parties</li>
   </ul>
   <p>
-    All content you add to the app remains stored locally on your device unless you choose to share or export it yourself.
+    Photo Paranoid stores vault content on your iPhone during normal use and does
+    not upload it to our servers. If you use Apple's iPhone Backup, Apple may
+    include the app's data in an iCloud backup or an encrypted computer backup.
+    Sharing or exporting files is a separate action you choose.
   </p>
 
   <h3 id="backups-and-device-transfer">2.1 Backups, device transfer, and data loss</h3>
   <p>
-    <strong>Photo Paranoid does not currently provide cloud backup, cross-device sync,
-    or a built-in vault backup and restore feature.</strong> Vault files are excluded from
-    device backups. Do not rely on an iCloud or computer backup of your iPhone, or on
-    automatic device transfer, to preserve or transfer your vault contents.
+    Photo Paranoid does not operate a cloud vault, cross-device sync, or a built-in
+    vault backup and restore feature. Starting with version 1.2.0, the app attempts
+    to prepare vault files and PIN verification records for Apple-managed iPhone
+    backup and device transfer after the app opens and protected storage is
+    available. Wait for preparation to finish before making a new backup or starting
+    a transfer. Successful preparation does not mean that a backup has been made or
+    that a restore will succeed. Version 1.1.12 and earlier excluded vault files
+    from device backups; older copies do not gain those files after an app update.
   </p>
   <p>
-    Before deleting the app, erasing or replacing your iPhone, or giving up access to your old
-    device, export your photos and videos and verify that the exported copies open correctly
-    in a safe location outside the app. Keep the old device and its app data until you have
-    checked the copies on your new device. Exported files are outside the app's PIN protection;
-    choose a storage location you trust.
+    Make a new iCloud backup or encrypted computer backup after updating the app.
+    Keep your old iPhone until you have checked your photos, videos, albums, and PIN
+    on the new device. You can also export files to a location you trust; exported
+    files are outside the app's PIN protection. Face ID or Touch ID may need to be
+    enabled again on the new device.
   </p>
   <p>
-    Deleting the app also deletes content stored only inside it. If you permanently delete
-    the originals from Photos, including Recently Deleted, the app may hold your only remaining
-    copy. Loss, failure, or erasure of the device may then cause permanent loss of that content.
-    We do not hold a server copy and cannot recover files that are no longer available on your
-    device or in a separate copy you retained. Restoring a purchase restores eligible paid access,
-    not your photos, videos, or albums.
+    Permanently deleting files in the app, using the Eraser PIN, or deleting the app
+    removes current local vault data but does not remove earlier device backups. If
+    you permanently delete the originals from Photos, including Recently Deleted,
+    the app or a separate backup may hold your only remaining copy. We do not hold a
+    server copy and cannot recover files that are no longer available on your device
+    or in a separate copy you retained. Restoring a purchase restores eligible paid
+    access, not your photos, videos, or albums.
   </p>
 
   <h2>3. Crash diagnostics (Firebase Crashlytics)</h2>
@@ -154,12 +164,18 @@
 
   <h2>6. Device security and biometric authentication</h2>
   <p>
-    The app can lock your content behind a PIN code, and optionally let you unlock it with
-    Face ID or Touch ID. Your PIN is stored only on your device in the system keychain and is
-    never sent to us. Biometric authentication is performed entirely by your device’s operating
-    system; the app never receives, sees, or stores your Face ID or Touch ID data, which remain
-    protected by the device’s Secure Enclave. Content you add to the app is protected on disk
-    using your device’s built-in data protection.
+    Starting with version 1.2.0, the app stores PIN verification records and
+    protection settings in a file protected by iOS data protection on your iPhone
+    and does not send them to us. Apple-managed iPhone backups and device transfers
+    may include this file after the app prepares the vault. Earlier versions used
+    the iOS Keychain for PIN verification; the updated app migrates existing
+    protection records. Face ID and Touch ID data remain on your device and are not
+    available to the app. Enable biometric unlock again on a new iPhone after
+    unlocking with your existing PIN.
+  </p>
+  <p>
+    Content you add to the app is protected on disk using your device’s built-in
+    data protection.
   </p>
 
   <h2>7. Payments</h2>
